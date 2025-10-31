@@ -4,7 +4,8 @@ This is a simplified version for quick testing and demonstration.
 """
 
 from crypto_price_predictor import CryptoPricePredictor
-from datetime import datetime
+from datetime import datetime, timedelta
+import pandas as pd
 
 def quick_demo():
     """Quick demonstration of the crypto predictor."""
@@ -24,7 +25,7 @@ def quick_demo():
     
     # Fetch last year of data for faster demo
     print("Fetching 1 year of historical data...")
-    start_date = (datetime.now() - pd.Timedelta(days=365)).strftime('%Y-%m-%d')
+    start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
     predictor.fetch_data(start_date=start_date)
     
     # Prepare data
@@ -69,8 +70,6 @@ def quick_demo():
 def compare_cryptocurrencies():
     """Compare predictions for multiple cryptocurrencies."""
     
-    import pandas as pd
-    
     cryptos = ['BTC-USD', 'ETH-USD', 'ADA-USD']
     results = []
     
@@ -85,7 +84,7 @@ def compare_cryptocurrencies():
             predictor = CryptoPricePredictor(crypto, prediction_days=30, future_days=7)
             
             # Fetch and prepare data
-            start_date = (datetime.now() - pd.Timedelta(days=365)).strftime('%Y-%m-%d')
+            start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
             predictor.fetch_data(start_date=start_date)
             X_train, y_train, X_test, y_test = predictor.prepare_data(test_size=0.2)
             
