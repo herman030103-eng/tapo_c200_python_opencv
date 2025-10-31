@@ -1,4 +1,41 @@
-# Using Tapo C200 TP Link Camera OpenCV Script Documentation
+# Repository Projects
+
+This repository contains two projects:
+
+1. **Tapo C200 Camera with OpenCV** - Original camera streaming project
+2. **🆕 Cryptocurrency Price Prediction with LSTM Neural Networks** - Advanced AI-powered crypto price forecasting
+
+---
+
+## 🚀 NEW: Cryptocurrency Price Prediction
+
+A sophisticated machine learning project that uses LSTM (Long Short-Term Memory) neural networks to predict cryptocurrency prices. The system can forecast Bitcoin, Ethereum, and other cryptocurrency prices for 1-7 days into the future.
+
+**Key Features:**
+- 🧠 Advanced LSTM neural network (128, 64, 32 units)
+- 📊 Real-time cryptocurrency data fetching
+- 📈 7-day future price predictions
+- 📉 Comprehensive evaluation metrics (R², RMSE, MAE, Accuracy)
+- 📊 Beautiful visualizations and analysis
+- ⚡ Supports all major cryptocurrencies (BTC, ETH, ADA, SOL, DOGE, etc.)
+
+**Quick Start:**
+```bash
+# Install dependencies
+pip install -r requirements_crypto.txt
+
+# Run the predictor
+python crypto_price_predictor.py
+
+# Or try the quick demo
+python demo_example.py
+```
+
+**📖 Full Documentation:** [README_CRYPTO_PREDICTION.md](README_CRYPTO_PREDICTION.md)
+
+---
+
+## Tapo C200 TP Link Camera OpenCV Script Documentation
 #### Introduction
 
 This documentation provides a guide on how to use the Tapo C200 TP Link camera with OpenCV. The script connects to the camera using an RTSP link and captures video frames for further processing or display.
